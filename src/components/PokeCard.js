@@ -1,6 +1,6 @@
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { mockPokemonData } from "../mock/pokeData";
-
 export default function PokeCard() {
   return (
     <div>
@@ -8,10 +8,11 @@ export default function PokeCard() {
 
       <img src={mockPokemonData.sprites.front_shiny} alt="pic" />
       <img src={mockPokemonData.sprites.front_default} alt="pic" />
-
-      <p>
-        <a href={mockPokemonData.video}></a>
-      </p>
+      <div>
+        <a href={mockPokemonData.video} target="blank_">
+          Link to video
+        </a>
+      </div>
     </div>
   );
 }
